@@ -1,0 +1,3 @@
+/opt/java/repository/caroffice/src/test/java/com/caroffice/endpoint/OilEndpointTest.java
+/opt/java/repository/caroffice/src/test/java/com/caroffice/business/OilBusinessTest.java
+/opt/java/repository/caroffice/src/test/java/com/caroffice/infrastructure/exception/GlobalControllerExceptionHandlerTest.java

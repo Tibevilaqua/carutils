@@ -10,7 +10,7 @@ public interface Resources {
     String OIL = "/oil";
 
 
-//  Oil Requests
+//  OilEntity Requests
     String GET_OIL = OIL + "/{id}";
 
 }

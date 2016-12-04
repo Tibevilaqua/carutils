@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 public enum ExceptionEnum {
 
-    OIL_NOT_FOUND(HttpStatus.NOT_FOUND, "Oil not found");
+    OIL_NOT_FOUND(HttpStatus.NOT_FOUND, "OilEntity not found");
 
     private HttpStatus httpStatus;
     private String description;

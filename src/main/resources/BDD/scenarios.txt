@@ -30,3 +30,9 @@
     When:  the end point (/oil/1) be requested
     AND    there's no oil corresponding with the ID 1
     Then:  A message of OIL not found will be returned to the client
+
+#Task5 - Start searching information from the database
+
+    Given: There's an OIL registered in our system
+    When:  the end point (/oil/1) be accessed
+    Then:  the corresponded OIL to the ID 1 will be returned

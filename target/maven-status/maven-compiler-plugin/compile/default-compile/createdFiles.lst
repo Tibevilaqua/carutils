@@ -1,0 +1,12 @@
+com/caroffice/repository/OilRepository.class
+com/caroffice/entity/OilEntity.class
+com/caroffice/infrastructure/exception/CustomException.class
+com/caroffice/config/SpringMongoConfig.class
+com/caroffice/business/OilBusiness.class
+com/caroffice/endpoint/Resources.class
+com/caroffice/infrastructure/oil/OilTypeEnum.class
+com/caroffice/infrastructure/exception/GlobalControllerExceptionHandler.class
+com/caroffice/endpoint/OilEndpoint.class
+com/caroffice/infrastructure/exception/ExceptionEnum.class
+com/caroffice/Application.class
+com/caroffice/infrastructure/exception/ExceptionDTO.class
