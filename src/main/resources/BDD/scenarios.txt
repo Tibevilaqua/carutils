@@ -1,0 +1,14 @@
+#Task1 - Create hello world end point
+
+    Given: the server up and running
+    When:  A GET request be performed
+    Then:  A json result saying "hello world" will be returned
+
+
+#Task2 - Sending project to git hub
+
+    Given: A repository created on git hub
+    When:  A new story be implemented
+    Then:  The project must be delivered to the repository
+
+
