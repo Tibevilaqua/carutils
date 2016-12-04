@@ -18,3 +18,15 @@
     When:  New code be developed
     Then:  Tests must be written to guarantee the quality of the code
 
+#Task3 - Creating endpoint to search OIL
+
+    Given: There's an OIL registered in our system
+    When:  the end point (/oil/1) be accessed
+    Then:  the corresponded OIL to the ID 1 will be returned (mocked)
+
+#Task4 - Creating default not found message
+
+    Given: There's an OIL registered in our system
+    When:  the end point (/oil/1) be requested
+    AND    there's no oil corresponding with the ID 1
+    Then:  A message of OIL not found will be returned to the client
