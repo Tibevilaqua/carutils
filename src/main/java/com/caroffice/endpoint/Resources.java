@@ -11,6 +11,6 @@ public interface Resources {
 
 
 //  OilEntity Requests
-    String GET_OIL = OIL + "/{id}";
+    String GET_OIL = OIL + "/{name}";
 
 }

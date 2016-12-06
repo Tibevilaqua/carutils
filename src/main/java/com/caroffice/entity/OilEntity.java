@@ -1,9 +1,13 @@
 package com.caroffice.entity;
 
+import com.caroffice.endpoint.Oil.OilDTO;
 import com.caroffice.infrastructure.oil.OilTypeEnum;
+import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
+
+import java.math.BigInteger;
 
 /**
  * Created by root on 05/12/16.
@@ -13,26 +17,34 @@ public class OilEntity {
 
     @Id
     @Field("_id")
-    private Integer id;
+    private ObjectId id;
+
+
     private String name;
     private OilTypeEnum type;
     private String description;
 
-    public OilEntity(Integer id, String name, OilTypeEnum type, String description) {
+    public OilEntity(ObjectId id, String name, OilTypeEnum type, String description) {
         this.id = id;
         this.name = name;
         this.type = type;
         this.description = description;
     }
 
+    public OilEntity(OilDTO oilDTO) {
+        this.name = oilDTO.getName();
+        this.description = oilDTO.getDescription();
+        this.type = oilDTO.getType();
+    }
+
     public OilEntity() {
     }
 
-    public Integer getId() {
+    public ObjectId getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(ObjectId id) {
         this.id = id;
     }
 
@@ -82,4 +94,6 @@ public class OilEntity {
         result = 31 * result + (description != null ? description.hashCode() : 0);
         return result;
     }
+
+
 }

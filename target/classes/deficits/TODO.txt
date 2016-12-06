@@ -1,0 +1,4 @@
+TODO List
+
+Validate every Enum individually and return a proper message.
+

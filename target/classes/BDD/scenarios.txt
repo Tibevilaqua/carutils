@@ -36,3 +36,20 @@
     Given: There's an OIL registered in our system
     When:  the end point (/oil/1) be accessed
     Then:  the corresponded OIL to the ID 1 will be returned
+    And    the code {200 OK} will be returned
+
+#Task6 - Start saving Oil products
+
+    Given: the system is up and running
+    When:  the end point (/oil) be accessed
+    AND    the user try to save a new Oil like:
+    {
+        "name": "My Oil Test"
+        ,"type": "TYPE_5W_30"
+        ,"description": "My description"
+    }
+    Then:  the corresponded OIL to the ID 1 will be returned
+    AND  the code {201 create} will be returned
+
+
+
