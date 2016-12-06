@@ -65,6 +65,3 @@
     AND    there is an Oil object in the database with the same name "My Oil Test"
     Then:  and duplicated error will be returned
     AND  the code {409 conflict} will be returned
-
-
-

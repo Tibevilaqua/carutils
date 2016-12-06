@@ -36,10 +36,7 @@ public class OilEndpoint {
     @RequestMapping(value = OIL,method = RequestMethod.POST)
     public ResponseEntity<Void> save(@Valid @RequestBody OilDTO oilDTO) {
         oilBusiness.save(oilDTO.toOilEntity());
-        System.out.println(oilDTO);
         return new ResponseEntity<>(HttpStatus.CREATED);
-
-
     }
 
 }

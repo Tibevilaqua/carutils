@@ -9,7 +9,8 @@ import javax.servlet.http.HttpServletResponse;
  */
 public enum ExceptionEnum {
 
-    OIL_NOT_FOUND(HttpStatus.NOT_FOUND, "OilEntity not found");
+    OIL_NOT_FOUND(HttpStatus.NOT_FOUND, "OilEntity not found"),
+    OIL_CONFLICT(HttpStatus.CONFLICT, "Duplicated OilEntity. Name must be unique");
 
     private HttpStatus httpStatus;
     private String description;

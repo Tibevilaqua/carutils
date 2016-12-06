@@ -30,8 +30,16 @@ public class OilBusiness {
                 .orElseThrow(() -> new CustomException(ExceptionEnum.OIL_NOT_FOUND)));
     }
 
-
+    /**
+     * Save the new OilEntity in the database </br>
+     * Throws CustomException(ExceptionEnum.OIL_CONFLICT) in case the Oil
+     * name is already inserted in the database
+     * @param oilEntity
+     */
     public void save(OilEntity oilEntity){
+
+        Optional.ofNullable(oilRepository.findByName(oilEntity.getName())).ifPresent(oilDTO -> {throw new CustomException(ExceptionEnum.OIL_CONFLICT);});
+
         oilRepository.save(oilEntity);
     }
 

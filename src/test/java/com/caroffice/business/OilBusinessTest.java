@@ -3,6 +3,7 @@ package com.caroffice.business;
 import com.caroffice.endpoint.Oil.OilDTO;
 import com.caroffice.entity.OilEntity;
 import com.caroffice.infrastructure.exception.CustomException;
+import com.caroffice.infrastructure.exception.ExceptionEnum;
 import com.caroffice.infrastructure.oil.OilTypeEnum;
 import com.caroffice.repository.OilRepository;
 import org.bson.types.ObjectId;
@@ -12,6 +13,8 @@ import org.junit.Test;
 import org.mockito.Mockito;
 
 import java.math.BigInteger;
+
+import static org.mockito.Matchers.anyString;
 
 /**
  * Created by root on 05/12/16.
@@ -50,7 +53,24 @@ public class OilBusinessTest {
     public void shouldSaveObject_when_everythingIsAlright(){
         OilEntity oilEntity = new OilEntity(null,"a",OilTypeEnum.TYPE_5W_30,"d");
         Mockito.when(oilRepositoryMocked.save(oilEntity)).thenReturn(oilEntity);
+        Mockito.when(oilRepositoryMocked.findByName(oilEntity.getName())).thenReturn(null);
         new OilBusiness(oilRepositoryMocked).save(oilEntity);
+    }
+
+
+    @Test(expected = CustomException.class)
+    public void shouldThrowConflictException_when_tryingToSaveWithTheSameOilName(){
+        OilEntity oilEntity = new OilEntity(null,"a",OilTypeEnum.TYPE_5W_30,"d");
+        Mockito.when(oilRepositoryMocked.findByName(oilEntity.getName())).thenReturn(new OilEntity());
+
+        try {
+            new OilBusiness(oilRepositoryMocked).save(oilEntity);
+        }catch (CustomException c){
+            Assert.assertEquals(c.getDescription(), ExceptionEnum.OIL_CONFLICT.getDescription());
+            Assert.assertEquals(c.getHttpStatus(), ExceptionEnum.OIL_CONFLICT.getHttpStatus());
+            throw new CustomException(ExceptionEnum.OIL_CONFLICT);
+        }
+        Assert.fail();
     }
 
 
