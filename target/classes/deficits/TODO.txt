@@ -2,3 +2,4 @@ TODO List
 
 Validate every Enum individually and return a proper message.
 
+Create GetOil (list) and default object to return Item or Items (Unique or list)
