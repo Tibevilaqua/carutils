@@ -26,14 +26,14 @@ public class OilEndpointTest {
     public void shouldSearch_when_OilExist(){
 
         OilBusiness oilBusinessMocked = Mockito.mock(OilBusiness.class);
-        Mockito.when(oilBusinessMocked.getOilBy(defaultName)).thenReturn(new OilDTO(defaultName, OilTypeEnum.TYPE_5W_30,"Description"));
+        Mockito.when(oilBusinessMocked.getOilBy(defaultName)).thenReturn(new OilDTO(defaultName, OilTypeEnum.TYPE_5W_30,"Description",null));
         OilDTO result = new OilEndpoint(oilBusinessMocked).getBy(defaultName);
         Assert.assertEquals(defaultName,result.getName());
     }
 
     @Test
     public void shouldSaveAndReturnCreated_when_OilDTOIsAlright(){
-        OilEntity oilEntity = new OilEntity();
+        OilDTO oilEntity = new OilDTO();
         OilBusiness oilBusinessMocked = Mockito.mock(OilBusiness.class);
         Mockito.doNothing().when(oilBusinessMocked).save(oilEntity);
         OilDTO oilDTO = new OilDTO();

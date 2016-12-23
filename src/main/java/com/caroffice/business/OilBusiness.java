@@ -9,7 +9,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Optional;
+import java.util.function.Consumer;
+import java.util.function.Supplier;
+
+import static javafx.scene.input.KeyCode.T;
 
 /**
  * Created by root on 05/12/16.
@@ -34,14 +41,34 @@ public class OilBusiness {
      * Save the new OilEntity in the database </br>
      * Throws CustomException(ExceptionEnum.OIL_CONFLICT) in case the Oil
      * name is already inserted in the database
-     * @param oilEntity
+     * @param oilDTO
      */
-    public void save(OilEntity oilEntity){
+    public void save(OilDTO oilDTO){
+        OilEntity oilEntity = oilDTO.toOilEntity();
 
-        Optional.ofNullable(oilRepository.findByName(oilEntity.getName())).ifPresent(oilDTO -> {throw new CustomException(ExceptionEnum.OIL_CONFLICT);});
+        Optional.ofNullable(oilRepository.findByName(oilEntity.getName())).ifPresent(oil -> {throw new CustomException(ExceptionEnum.OIL_CONFLICT);});
 
         oilRepository.save(oilEntity);
     }
+
+
+    public OilDTO update(OilDTO oilDTO) {
+
+        OilEntity oilEntity = oilDTO.toOilEntity();
+
+        OilEntity oil = Optional.ofNullable(oilRepository.findByName(oilEntity.getName())).orElseThrow(() -> new CustomException(ExceptionEnum.OIL_NOT_FOUND));
+
+        //Update if value is not null
+        Optional.ofNullable(oilEntity.getImage()).ifPresent(image -> oil.setImage(image));
+        Optional.ofNullable(oilEntity.getDescription()).ifPresent(description -> oil.setDescription(description));
+        Optional.ofNullable(oilEntity.getName()).ifPresent(name -> oil.setName(name));
+        Optional.ofNullable(oilEntity.getType()).ifPresent(type -> oil.setType(type));
+
+        return oilRepository.save(oil).toOilDTO();
+
+    }
+
+
 
 
 }

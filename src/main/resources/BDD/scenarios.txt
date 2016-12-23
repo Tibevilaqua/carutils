@@ -72,3 +72,11 @@
     Given: the server up and running
     When:  A GET request from bodywork system be performed
     Then:  the proper response must be returned
+
+#Task9 - Start searching oil with Image
+
+    Given: There's an OIL registered in our system
+    When:  the end point (/oil/1) be accessed
+    Then:  the corresponded OIL to the ID 1
+    And :  its image in binary data will be returned
+    And :  followed by the code {200 OK}

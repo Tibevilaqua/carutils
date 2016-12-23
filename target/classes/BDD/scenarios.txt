@@ -65,3 +65,18 @@
     AND    there is an Oil object in the database with the same name "My Oil Test"
     Then:  and duplicated error will be returned
     AND  the code {409 conflict} will be returned
+
+
+#Task8 - Allow communication between Java script requests from the bodywork system
+
+    Given: the server up and running
+    When:  A GET request from bodywork system be performed
+    Then:  the proper response must be returned
+
+#Task5 - Start searching oil with Image
+
+    Given: There's an OIL registered in our system
+    When:  the end point (/oil/1) be accessed
+    Then:  the corresponded OIL to the ID 1
+    And :  its image in binary data will be returned
+    And :  followed by the code {200 OK}
