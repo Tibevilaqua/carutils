@@ -101,3 +101,9 @@
     Given: the server up and running
     When:  A GET request from bodywork system be performed
     Then:  the proper response must be returned
+
+#Task13 - return errors in a while that the front-end can understand and propagate the message to the user
+
+    Given: the server up and running
+    When:  An error occur
+    Then:  An understandable message should be returned

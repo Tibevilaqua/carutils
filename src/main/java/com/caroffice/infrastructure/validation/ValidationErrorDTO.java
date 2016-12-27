@@ -8,7 +8,7 @@ import java.util.List;
 public class ValidationErrorDTO {
 
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
-    private List<String> errors = new ArrayList<>();
+    private List<ErrorField> errors = new ArrayList<>();
 
     private final String errorMessage;
 
@@ -16,11 +16,11 @@ public class ValidationErrorDTO {
         this.errorMessage = errorMessage;
     }
 
-    public void addValidationError(String error) {
+    public void addValidationError(ErrorField error) {
         errors.add(error);
     }
 
-    public List<String> getErrors() {
+    public List<ErrorField> getErrors() {
         return errors;
     }
 
