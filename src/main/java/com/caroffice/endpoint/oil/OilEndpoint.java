@@ -1,6 +1,5 @@
-package com.caroffice.endpoint.Oil;
+package com.caroffice.endpoint.oil;
 
-import com.caroffice.entity.OilEntity;
 import com.caroffice.business.OilBusiness;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -9,9 +8,6 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
-import java.math.BigInteger;
-
-import static com.caroffice.endpoint.Resources.GET_OIL;
 import static com.caroffice.endpoint.Resources.OIL;
 
 

@@ -18,27 +18,27 @@
     When:  New code be developed
     Then:  Tests must be written to guarantee the quality of the code
 
-#Task3 - Creating endpoint to search OIL
+#Task4 - Creating endpoint to search OIL
 
     Given: There's an OIL registered in our system
     When:  the end point (/oil/1) be accessed
     Then:  the corresponded OIL to the ID 1 will be returned (mocked)
 
-#Task4 - Creating default not found message
+#Task5 - Creating default not found message
 
     Given: There's an OIL registered in our system
     When:  the end point (/oil/1) be requested
     AND    there's no oil corresponding with the ID 1
     Then:  A message of OIL not found will be returned to the client
 
-#Task5 - Start searching information from the database
+#Task6 - Start searching information from the database
 
     Given: There's an OIL registered in our system
     When:  the end point (/oil/1) be accessed
     Then:  the corresponded OIL to the ID 1 will be returned
     And    the code {200 OK} will be returned
 
-#Task6 - Start saving Oil products
+#Task7 - Start saving Oil products
 
     Given: the system is up and running
     When:  the end point (/oil) be accessed
@@ -52,7 +52,7 @@
     AND  the code {201 create} will be returned
 
 
-#Task7 - Does not allow to save Oil with duplicated names
+#Task8 - Does not allow to save Oil with duplicated names
 
     Given: the system is up and running
     When:  the end point (/oil) be accessed
@@ -67,16 +67,30 @@
     AND  the code {409 conflict} will be returned
 
 
-#Task8 - Allow communication between Java script requests from the bodywork system
+#Task9 - Allow communication between Java script requests from the bodywork system
 
     Given: the server up and running
     When:  A GET request from bodywork system be performed
     Then:  the proper response must be returned
 
-#Task9 - Start searching oil with Image
+#Task10 - Start searching oil with Image
 
     Given: There's an OIL registered in our system
     When:  the end point (/oil/1) be accessed
     Then:  the corresponded OIL to the ID 1
     And :  its image in binary data will be returned
     And :  followed by the code {200 OK}
+
+
+#Task11 - Start saving User
+
+    Given: The system is up and running
+    When:  the customer try to sign up sending the following information:
+   {
+       "name": "James"
+       ,"surname": "Bond"
+       ,"gender": "MALE"
+       ,"birthDate": "1993-10-23"
+   }
+    Then:  the user will be persisted in the database
+    AND  the code {201 create} will be returned

@@ -1,4 +1,4 @@
-package com.caroffice.endpoint.Oil;
+package com.caroffice.endpoint.oil;
 
 import com.caroffice.entity.OilEntity;
 import com.caroffice.infrastructure.oil.OilTypeEnum;

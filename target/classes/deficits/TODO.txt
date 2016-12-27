@@ -3,3 +3,5 @@ TODO List
 Validate every Enum individually and return a proper message.
 
 Create GetOil (list) and default object to return Item or Items (Unique or list)
+
+OilDTO "Image attribute" :  It's returning all the bytes of the image.

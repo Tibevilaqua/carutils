@@ -1,7 +1,7 @@
 package com.caroffice.infrastructure.oil;
 
 import com.caroffice.business.OilBusiness;
-import com.caroffice.endpoint.Oil.OilDTO;
+import com.caroffice.endpoint.oil.OilDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;

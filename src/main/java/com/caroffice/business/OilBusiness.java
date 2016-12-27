@@ -1,6 +1,6 @@
 package com.caroffice.business;
 
-import com.caroffice.endpoint.Oil.OilDTO;
+import com.caroffice.endpoint.oil.OilDTO;
 import com.caroffice.entity.OilEntity;
 import com.caroffice.infrastructure.exception.CustomException;
 import com.caroffice.infrastructure.exception.ExceptionEnum;
@@ -8,15 +8,7 @@ import com.caroffice.repository.OilRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.math.BigInteger;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 import java.util.Optional;
-import java.util.function.Consumer;
-import java.util.function.Supplier;
-
-import static javafx.scene.input.KeyCode.T;
 
 /**
  * Created by root on 05/12/16.
@@ -39,7 +31,7 @@ public class OilBusiness {
 
     /**
      * Save the new OilEntity in the database </br>
-     * Throws CustomException(ExceptionEnum.OIL_CONFLICT) in case the Oil
+     * Throws CustomException(ExceptionEnum.OIL_CONFLICT) in case the oil
      * name is already inserted in the database
      * @param oilDTO
      */

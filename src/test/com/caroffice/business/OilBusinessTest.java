@@ -1,6 +1,6 @@
 package com.caroffice.business;
 
-import com.caroffice.endpoint.Oil.OilDTO;
+import com.caroffice.endpoint.oil.OilDTO;
 import com.caroffice.entity.OilEntity;
 import com.caroffice.infrastructure.exception.CustomException;
 import com.caroffice.infrastructure.exception.ExceptionEnum;
@@ -12,10 +12,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
 
-import java.math.BigInteger;
-
 import static org.mockito.Matchers.any;
-import static org.mockito.Matchers.anyString;
 
 /**
  * Created by root on 05/12/16.

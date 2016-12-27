@@ -1,19 +1,14 @@
-package com.caroffice.endpoint;
+package com.caroffice.endpoint.oil;
 
-import com.caroffice.endpoint.Oil.OilDTO;
-import com.caroffice.endpoint.Oil.OilEndpoint;
-import com.caroffice.entity.OilEntity;
+import com.caroffice.endpoint.oil.OilDTO;
+import com.caroffice.endpoint.oil.OilEndpoint;
 import com.caroffice.business.OilBusiness;
 import com.caroffice.infrastructure.oil.OilTypeEnum;
-import org.bson.types.ObjectId;
 import org.junit.Assert;
 import org.junit.Test;
 import org.mockito.Mockito;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-
-import java.math.BigDecimal;
-import java.math.BigInteger;
 
 /**
  * Created by root on 04/12/16.

@@ -73,10 +73,24 @@
     When:  A GET request from bodywork system be performed
     Then:  the proper response must be returned
 
-#Task5 - Start searching oil with Image
+#Task9 - Start searching oil with Image
 
     Given: There's an OIL registered in our system
     When:  the end point (/oil/1) be accessed
     Then:  the corresponded OIL to the ID 1
     And :  its image in binary data will be returned
     And :  followed by the code {200 OK}
+
+
+#Task6 - Start saving User
+
+    Given: The system is up and running
+    When:  the customer try to sign up sending the following information:
+   {
+       "name": "James"
+       ,"surname": "Bond"
+       ,"gender": "MALE"
+       ,"birthDate": "1993-10-23"
+   }
+    Then:  the user will be persisted in the database
+    AND  the code {201 create} will be returned

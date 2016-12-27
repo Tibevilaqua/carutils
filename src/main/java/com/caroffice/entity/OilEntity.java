@@ -1,13 +1,11 @@
 package com.caroffice.entity;
 
-import com.caroffice.endpoint.Oil.OilDTO;
+import com.caroffice.endpoint.oil.OilDTO;
 import com.caroffice.infrastructure.oil.OilTypeEnum;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
-
-import java.math.BigInteger;
 
 /**
  * Created by root on 05/12/16.
