@@ -94,3 +94,10 @@
    }
     Then:  the user will be persisted in the database
     AND  the code {201 create} will be returned
+
+
+#Task12 - Allow communication between Java script requests from the bodywork system (Header  Content-Type)
+
+    Given: the server up and running
+    When:  A GET request from bodywork system be performed
+    Then:  the proper response must be returned

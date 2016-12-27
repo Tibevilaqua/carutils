@@ -1,43 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cfb866bb-3b02-49ea-9228-06a597afbc92" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/caroffice/business/UserBusiness.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/caroffice/endpoint/user/UserDTO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/caroffice/endpoint/user/UserEndpoint.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/caroffice/entity/UserEntity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/caroffice/infrastructure/user/GenderEnum.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/caroffice/repository/UserRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/com/caroffice/endpoint/oil/OilDTOTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/com/caroffice/endpoint/user/UserDTOTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/com/caroffice/endpoint/user/UserEndpointTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/com/caroffice/entity/OilEntityTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/com/caroffice/infrastructure/utils/AnnotationCheckHelper.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/caroffice/Application.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/caroffice/endpoint/Oil/OilDTO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/caroffice/endpoint/Oil/OilEndpoint.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/com/caroffice/endpoint/OilEndpointTest.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/caroffice/Application.java" afterPath="$PROJECT_DIR$/src/main/java/com/caroffice/ApplicationStarter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/caroffice/endpoint/Oil/OilDTO.java" afterPath="$PROJECT_DIR$/src/main/java/com/caroffice/endpoint/oil/OilDTO.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/caroffice/endpoint/Oil/OilEndpoint.java" afterPath="$PROJECT_DIR$/src/main/java/com/caroffice/endpoint/oil/OilEndpoint.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/com/caroffice/endpoint/OilEndpointTest.java" afterPath="$PROJECT_DIR$/src/test/com/caroffice/endpoint/oil/OilEndpointTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/caroffice/business/OilBusiness.class" afterPath="$PROJECT_DIR$/target/classes/com/caroffice/business/OilBusiness.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/caroffice/endpoint/Resources.class" afterPath="$PROJECT_DIR$/target/classes/com/caroffice/endpoint/Resources.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/caroffice/entity/OilEntity.class" afterPath="$PROJECT_DIR$/target/classes/com/caroffice/entity/OilEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/caroffice/business/OilBusinessTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/caroffice/business/OilBusinessTest.class" />
+    <list default="true" id="cfb866bb-3b02-49ea-9228-06a597afbc92" name="Default" comment="#Task9 - Allow communication between Java script requests from the bodywork system (Header  Content-Type)">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/caroffice/infrastructure/exception/GlobalControllerExceptionHandler.class" afterPath="$PROJECT_DIR$/target/classes/com/caroffice/infrastructure/exception/GlobalControllerExceptionHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/caroffice/infrastructure/validation/ValidationErrorBuilder.class" afterPath="$PROJECT_DIR$/target/classes/com/caroffice/infrastructure/validation/ValidationErrorBuilder.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/caroffice/business/OilBusiness.java" afterPath="$PROJECT_DIR$/src/main/java/com/caroffice/business/OilBusiness.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/caroffice/endpoint/Resources.java" afterPath="$PROJECT_DIR$/src/main/java/com/caroffice/endpoint/Resources.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/caroffice/entity/OilEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/caroffice/entity/OilEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/caroffice/infrastructure/exception/GlobalControllerExceptionHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/caroffice/infrastructure/exception/GlobalControllerExceptionHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/caroffice/infrastructure/oil/OilImageScheduler.java" afterPath="$PROJECT_DIR$/src/main/java/com/caroffice/infrastructure/oil/OilImageScheduler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/caroffice/infrastructure/validation/ValidationErrorBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/com/caroffice/infrastructure/validation/ValidationErrorBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/caroffice/repository/OilRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/caroffice/repository/OilRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/caroffice/config/SimpleCORSFIlter.java" afterPath="$PROJECT_DIR$/src/main/java/com/caroffice/config/SimpleCORSFIlter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/BDD/scenarios.txt" afterPath="$PROJECT_DIR$/src/main/resources/BDD/scenarios.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/deficits/TODO.txt" afterPath="$PROJECT_DIR$/src/main/resources/deficits/TODO.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/com/caroffice/business/OilBusinessTest.java" afterPath="$PROJECT_DIR$/src/test/com/caroffice/business/OilBusinessTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/BDD/scenarios.txt" afterPath="$PROJECT_DIR$/target/classes/BDD/scenarios.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/deficits/TODO.txt" afterPath="$PROJECT_DIR$/target/classes/deficits/TODO.txt" />
     </list>
     <ignored path="caroffice.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -74,8 +44,8 @@
       <file leaf-file-name="scenarios.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/BDD/scenarios.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="27" />
+            <state relative-caret-position="376">
+              <caret line="98" column="106" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="106" />
               <folding />
             </state>
           </provider>
@@ -84,8 +54,8 @@
       <file leaf-file-name="ApplicationStarter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/caroffice/ApplicationStarter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="162">
+              <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -165,7 +135,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/caroffice/config/SpringMongoConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/caroffice/infrastructure/exception/ExceptionEnum.java" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/main/java/com/caroffice/config/SimpleCORSFIlter.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/caroffice/endpoint/Oil/OilEndpoint.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/caroffice/endpoint/OilEndpointTest.java" />
@@ -193,6 +162,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/caroffice/ApplicationStarter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/caroffice/infrastructure/exception/GlobalControllerExceptionHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/caroffice/infrastructure/validation/ValidationErrorBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/caroffice/config/SimpleCORSFIlter.java" />
         <option value="$PROJECT_DIR$/src/main/resources/BDD/scenarios.txt" />
       </list>
     </option>
@@ -220,9 +190,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="51" />
-    <option name="y" value="52" />
-    <option name="width" value="1305" />
-    <option name="height" value="686" />
+    <option name="y" value="24" />
+    <option name="width" value="1315" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -382,105 +352,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="entity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="caroffice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="caroffice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="caroffice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="endpoint" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="caroffice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="caroffice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="caroffice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="endpoint" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="caroffice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="caroffice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="caroffice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="endpoint" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="oil" />
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1106,7 +978,7 @@
       <workItem from="1481184851118" duration="2783000" />
       <workItem from="1482377528477" duration="4438000" />
       <workItem from="1482460043331" duration="9943000" />
-      <workItem from="1482814338580" duration="9808000" />
+      <workItem from="1482814338580" duration="12142000" />
     </task>
     <task id="LOCAL-00001" summary="#Task8 - Allow communication between Java script requests from the bodywork system">
       <created>1482409142928</created>
@@ -1122,7 +994,14 @@
       <option name="project" value="LOCAL" />
       <updated>1482468111020</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="#Task11 - Start saving User">
+      <created>1482824165885</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1482824165885</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1158,10 +1037,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66034000" />
+    <option name="totallyTimeSpent" value="68368000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="51" y="52" width="1305" height="686" extended-state="0" />
+    <frame x="51" y="24" width="1315" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1172,12 +1051,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22937942" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32828283" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29907975" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297546" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297546" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29057798" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28829536" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297546" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1207,7 +1086,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="#Task8 - Allow communication between Java script requests from the bodywork system" />
     <MESSAGE value="#Task9 - Start searching oil with Image" />
-    <option name="LAST_COMMIT_MESSAGE" value="#Task9 - Start searching oil with Image" />
+    <MESSAGE value="#Task11 - Start saving User" />
+    <option name="LAST_COMMIT_MESSAGE" value="#Task11 - Start saving User" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1381,14 +1261,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/caroffice/config/SimpleCORSFIlter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/caroffice/config/SpringMongoConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -1450,7 +1322,7 @@
         <state relative-caret-position="356">
           <caret line="34" column="58" selection-start-line="34" selection-start-column="58" selection-end-line="34" selection-end-column="58" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1494,7 +1366,7 @@
         <state relative-caret-position="288">
           <caret line="50" column="20" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1663,16 +1535,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/caroffice/ApplicationStarter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="162">
+          <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/caroffice/config/SimpleCORSFIlter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="16" column="90" selection-start-line="16" selection-start-column="77" selection-end-line="16" selection-end-column="90" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/BDD/scenarios.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="27" />
+        <state relative-caret-position="376">
+          <caret line="98" column="106" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="106" />
           <folding />
         </state>
       </provider>
