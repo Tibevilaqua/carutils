@@ -21,10 +21,11 @@ public class GlobalControllerExceptionHandler {
 
     @ExceptionHandler(CustomException.class)
     @ResponseBody
-    public ResponseEntity<ExceptionDTO> handleConflict(CustomException customException) {
+    public ResponseEntity<ValidationErrorDTO> handleConflict(CustomException customException) {
 
         HttpStatus responseStatus = customException.getHttpStatus();
-        return new ResponseEntity<>(new ExceptionDTO(customException.getDescription()), responseStatus);
+
+        return new ResponseEntity<>(ValidationErrorBuilder.fromBindingErrors(customException.getField(), customException.getDescription()), responseStatus);
     }
 
 

@@ -27,6 +27,8 @@ public class UserEntity {
     private String email;
     private String password;
 
+    public UserEntity() {
+    }
 
     public UserEntity(ObjectId id, String name, String surname, GenderEnum gender, Date birthDate, String email, String password) {
         this.id = id;

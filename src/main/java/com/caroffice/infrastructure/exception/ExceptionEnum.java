@@ -9,16 +9,19 @@ import javax.servlet.http.HttpServletResponse;
  */
 public enum ExceptionEnum {
 
-    OIL_NOT_FOUND(HttpStatus.NOT_FOUND, "OilEntity not found"),
-    OIL_CONFLICT(HttpStatus.CONFLICT, "Duplicated OilEntity. Name must be unique");
+    OIL_NOT_FOUND(HttpStatus.NOT_FOUND, "OilEntity not found",null),
+    OIL_CONFLICT(HttpStatus.CONFLICT, "Duplicated OilEntity. Name must be unique", "name"),
+    USER_EMAIL_CONFLICT(HttpStatus.CONFLICT, "This email is already in use, sorry mate","email");
 
     private HttpStatus httpStatus;
     private String description;
+    private String field;
 
 
-    ExceptionEnum(HttpStatus httpStatus, String description) {
+    ExceptionEnum(HttpStatus httpStatus, String description, String field) {
         this.httpStatus = httpStatus;
         this.description = description;
+        this.field = field;
     }
 
     public String getDescription() {
@@ -29,4 +32,7 @@ public enum ExceptionEnum {
         return httpStatus;
     }
 
+    public String getField() {
+        return field;
+    }
 }

@@ -10,10 +10,13 @@ public class CustomException extends RuntimeException{
 
     private final HttpStatus httpStatus;
     private final String description;
+    private final String field;
+
 
     public CustomException(ExceptionEnum exceptionEnum) {
         this.description = exceptionEnum.getDescription();
         this.httpStatus = exceptionEnum.getHttpStatus();
+        this.field = exceptionEnum.getField();
     }
 
     public HttpStatus getHttpStatus() {
@@ -22,5 +25,9 @@ public class CustomException extends RuntimeException{
 
     public String getDescription() {
         return description;
+    }
+
+    public String getField() {
+        return field;
     }
 }

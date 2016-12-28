@@ -133,3 +133,10 @@
        ,"email": "james.bond@007.com"
    }
     Then:  the user will receive a message that the email is invalid
+
+
+#Task16 - Saving User - email not duplicate allowed
+
+    Given: The system is up and running
+    When:  The user try to save himself with an email that already exists in the database
+    Then:  the user will receive a message that the email is already registered
