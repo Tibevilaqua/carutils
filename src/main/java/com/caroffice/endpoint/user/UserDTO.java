@@ -3,29 +3,35 @@ package com.caroffice.endpoint.user;
 import com.caroffice.entity.UserEntity;
 import com.caroffice.infrastructure.user.GenderEnum;
 import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotBlank;
-
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Past;
 import java.util.Date;
+
+import static com.caroffice.endpoint.user.UserDTOValidationMessages.*;
 
 /**
  * Created by root on 27/12/16.
  */
 public class UserDTO {
 
-
-    @NotBlank(message = "Invalid name")
+    @Length(min = 3, message = AT_LEAST_3_CHARACTERS)
+    @NotBlank(message = INVALID_NAME)
     private String name;
-    @NotBlank(message = "Invalid surname")
+    @Length(min = 3,  message = AT_LEAST_3_CHARACTERS)
+    @NotBlank(message = INVALID_SURNAME)
     private String surname;
-    @NotNull(message = "invalid type")
+    @NotNull(message = INVALID_GENDER)
     private GenderEnum gender;
-    @NotNull(message = "invalid birthdate")
+    @NotNull(message = INVALID_BIRTHDATE)
+    @Past(message = "You are not from the future...")
     private Date birthDate;
-    @Email(message = "Invalid email")
-    @NotBlank(message = "Invalid email")
+    @Email(message = INVALID_EMAIL)
+    @NotBlank(message = INVALID_EMAIL)
     private String email;
-    @NotBlank(message = "Invalid password")
+    @Length(min = 3,  message = AT_LEAST_3_CHARACTERS)
+    @NotBlank(message = INVALID_PASSWORD)
     private String password;
 
     public UserDTO() {

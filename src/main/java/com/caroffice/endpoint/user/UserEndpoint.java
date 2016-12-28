@@ -1,7 +1,6 @@
 package com.caroffice.endpoint.user;
 
 import com.caroffice.business.UserBusiness;
-import com.caroffice.endpoint.oil.OilDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

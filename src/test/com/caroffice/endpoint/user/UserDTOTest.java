@@ -5,18 +5,12 @@ import com.caroffice.entity.UserEntity;
 import com.caroffice.infrastructure.user.GenderEnum;
 import com.caroffice.infrastructure.utils.AnnotationCheckHelper;
 import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotBlank;
 import org.junit.Assert;
 import org.junit.Test;
-import org.springframework.web.bind.annotation.RequestBody;
-
-import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.lang.annotation.Annotation;
-import java.lang.reflect.Method;
-import java.lang.reflect.Field;
-import java.lang.reflect.Parameter;
-import java.util.Arrays;
+import javax.validation.constraints.Past;
 import java.util.Date;
 
 import static org.junit.Assert.assertTrue;
@@ -47,20 +41,28 @@ public class UserDTOTest {
 
 
         Boolean isNotBlankPresentInNameField = AnnotationCheckHelper.doesFieldContainsAnnotation(UserDTO.class, "name", NotBlank.class);
+        Boolean isLengthPresentInNameField = AnnotationCheckHelper.doesFieldContainsAnnotation(UserDTO.class, "name", Length.class);
         Boolean isNotBlankPresentInSurNameField = AnnotationCheckHelper.doesFieldContainsAnnotation(UserDTO.class, "surname", NotBlank.class);
+        Boolean isLengthPresentInSurNameField = AnnotationCheckHelper.doesFieldContainsAnnotation(UserDTO.class, "surname", Length.class);
         Boolean isNotNullPresentInGenderField = AnnotationCheckHelper.doesFieldContainsAnnotation(UserDTO.class, "gender", NotNull.class);
         Boolean isNotNullPresentInBirthDateField = AnnotationCheckHelper.doesFieldContainsAnnotation(UserDTO.class, "birthDate", NotNull.class);
+        Boolean isPastPresentInBirthDateField = AnnotationCheckHelper.doesFieldContainsAnnotation(UserDTO.class, "birthDate", Past.class);
         Boolean isNotBlankPresentInEmailField = AnnotationCheckHelper.doesFieldContainsAnnotation(UserDTO.class, "email", NotBlank.class);
         Boolean isEmailPresentInEmailField = AnnotationCheckHelper.doesFieldContainsAnnotation(UserDTO.class, "email", Email.class);
         Boolean isNotBlankPresentInPasswordField = AnnotationCheckHelper.doesFieldContainsAnnotation(UserDTO.class, "password", NotBlank.class);
+        Boolean isLengthPresentInPasswordField = AnnotationCheckHelper.doesFieldContainsAnnotation(UserDTO.class, "password", Length.class);
 
         assertTrue("Should have @NotBlank to validate itself",isNotBlankPresentInNameField);
+        assertTrue("Should have @Length to validate itself",isLengthPresentInNameField);
         assertTrue("Should have @NotBlank to validate itself",isNotBlankPresentInSurNameField);
+        assertTrue("Should have @Length to validate itself",isLengthPresentInSurNameField);
         assertTrue("Should have @NotNull to validate itself",isNotNullPresentInGenderField);
         assertTrue("Should have @NotNull to validate itself",isNotNullPresentInBirthDateField);
+        assertTrue("Should have @Past to validate itself",isPastPresentInBirthDateField);
         assertTrue("Should have @NotBlank to validate itself",isNotBlankPresentInEmailField);
         assertTrue("Should have @Email to validate itself",isEmailPresentInEmailField);
         assertTrue("Should have @NotBlank to validate itself",isNotBlankPresentInPasswordField);
+        assertTrue("Should have @Length to validate itself",isLengthPresentInPasswordField);
 
 
     }
