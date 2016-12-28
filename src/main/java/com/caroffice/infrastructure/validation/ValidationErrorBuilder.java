@@ -10,7 +10,8 @@ public class ValidationErrorBuilder {
         ValidationErrorDTO error = new ValidationErrorDTO("Validation failed. " + errors.getErrorCount() + " error(s)");
         for (ObjectError objectError : errors.getAllErrors()) {
             String field = ((FieldError) objectError).getField();
-            error.addValidationError(new ErrorField(field,null));
+            String message = objectError.getDefaultMessage();
+            error.addValidationError(new ErrorField(field,message));
         }
         return error;
     }
