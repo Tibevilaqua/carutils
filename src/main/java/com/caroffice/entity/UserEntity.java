@@ -24,14 +24,18 @@ public class UserEntity {
     private String surname;
     private GenderEnum gender;
     private Date birthDate;
+    private String email;
+    private String password;
 
 
-    public UserEntity(ObjectId id, String name, String surname, GenderEnum gender, Date birthDate) {
+    public UserEntity(ObjectId id, String name, String surname, GenderEnum gender, Date birthDate, String email, String password) {
         this.id = id;
         this.name = name;
         this.surname = surname;
         this.gender = gender;
         this.birthDate = birthDate;
+        this.email = email;
+        this.password = password;
     }
 
     public UserEntity(UserDTO userDTO) {
@@ -39,9 +43,9 @@ public class UserEntity {
         this.surname = userDTO.getSurname();
         this.gender = userDTO.getGender();
         this.birthDate = userDTO.getBirthDate();
+        this.email = userDTO.getEmail();
+        this.password = userDTO.getPassword();
     }
-
-
 
 
     @Override
@@ -55,7 +59,9 @@ public class UserEntity {
         if (name != null ? !name.equals(that.name) : that.name != null) return false;
         if (surname != null ? !surname.equals(that.surname) : that.surname != null) return false;
         if (gender != that.gender) return false;
-        return birthDate != null ? birthDate.equals(that.birthDate) : that.birthDate == null;
+        if (birthDate != null ? !birthDate.equals(that.birthDate) : that.birthDate != null) return false;
+        if (email != null ? !email.equals(that.email) : that.email != null) return false;
+        return password != null ? password.equals(that.password) : that.password == null;
 
     }
 
@@ -66,9 +72,10 @@ public class UserEntity {
         result = 31 * result + (surname != null ? surname.hashCode() : 0);
         result = 31 * result + (gender != null ? gender.hashCode() : 0);
         result = 31 * result + (birthDate != null ? birthDate.hashCode() : 0);
+        result = 31 * result + (email != null ? email.hashCode() : 0);
+        result = 31 * result + (password != null ? password.hashCode() : 0);
         return result;
     }
-
 
     @Override
     public String toString() {
@@ -78,6 +85,8 @@ public class UserEntity {
                 ", surname='" + surname + '\'' +
                 ", gender=" + gender +
                 ", birthDate=" + birthDate +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
                 '}';
     }
 }

@@ -21,16 +21,21 @@ public class UserDTO {
     private GenderEnum gender;
     @NotNull(message = "invalid birthdate")
     private Date birthDate;
-
+    @NotBlank(message = "Invalid email")
+    private String email;
+    @NotBlank(message = "Invalid password")
+    private String password;
 
     public UserDTO() {
     }
 
-    public UserDTO(String name, String surname, GenderEnum gender, Date birthDate) {
+    public UserDTO(String name, String surname, GenderEnum gender, Date birthDate, String email, String password) {
         this.name = name;
         this.surname = surname;
         this.gender = gender;
         this.birthDate = birthDate;
+        this.email = email;
+        this.password = password;
     }
 
     public UserEntity toUserEntity() {
@@ -54,6 +59,14 @@ public class UserDTO {
         return birthDate;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -64,8 +77,9 @@ public class UserDTO {
         if (name != null ? !name.equals(userDTO.name) : userDTO.name != null) return false;
         if (surname != null ? !surname.equals(userDTO.surname) : userDTO.surname != null) return false;
         if (gender != userDTO.gender) return false;
-        return birthDate != null ? birthDate.equals(userDTO.birthDate) : userDTO.birthDate == null;
-
+        if (birthDate != null ? !birthDate.equals(userDTO.birthDate) : userDTO.birthDate != null) return false;
+        if (email != null ? !email.equals(userDTO.email) : userDTO.email != null) return false;
+        return password != null ? password.equals(userDTO.password) : userDTO.password == null;
     }
 
     @Override
@@ -74,6 +88,8 @@ public class UserDTO {
         result = 31 * result + (surname != null ? surname.hashCode() : 0);
         result = 31 * result + (gender != null ? gender.hashCode() : 0);
         result = 31 * result + (birthDate != null ? birthDate.hashCode() : 0);
+        result = 31 * result + (email != null ? email.hashCode() : 0);
+        result = 31 * result + (password != null ? password.hashCode() : 0);
         return result;
     }
 }

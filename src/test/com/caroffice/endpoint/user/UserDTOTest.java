@@ -30,9 +30,11 @@ public class UserDTOTest {
         Date date = new Date();
         String name = "James";
         String surName = "Bond";
+        String email = "james.bond@007.com";
+        String password = "123456";
 
-        UserEntity expectedResult = new UserEntity(null, name, surName, GenderEnum.MALE, date);
-        UserDTO toTransform = new UserDTO(name, surName, GenderEnum.MALE, date);
+        UserEntity expectedResult = new UserEntity(null, name, surName, GenderEnum.MALE, date, email,password);
+        UserDTO toTransform = new UserDTO(name, surName, GenderEnum.MALE, date,email,password);
 
         Assert.assertEquals("Should be the same", expectedResult, toTransform.toUserEntity());
 
