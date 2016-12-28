@@ -123,3 +123,13 @@
    }
     Then:  the user will be persisted in the database
     AND  the code {201 create} will be returned
+
+
+#Task15 - Saving User - email field validation
+
+    Given: The system is up and running
+    When:  the customer try to sign up and the email field is not filled properly like below
+   {
+       ,"email": "james.bond@007.com"
+   }
+    Then:  the user will receive a message that the email is invalid

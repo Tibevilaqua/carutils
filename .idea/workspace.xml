@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cfb866bb-3b02-49ea-9228-06a597afbc92" name="Default" comment="#Task13 - return errors in a while that the front-end can understand and propagate the message to the user">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/caroffice/infrastructure/validation/ValidationErrorBuilder.class" afterPath="$PROJECT_DIR$/target/classes/com/caroffice/infrastructure/validation/ValidationErrorBuilder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/caroffice/infrastructure/validation/ValidationErrorDTO.class" afterPath="$PROJECT_DIR$/target/classes/com/caroffice/infrastructure/validation/ValidationErrorDTO.class" />
+    <list default="true" id="cfb866bb-3b02-49ea-9228-06a597afbc92" name="Default" comment="#Task14 - Saving User - Adding fields email and password">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/caroffice/endpoint/user/UserDTO.java" afterPath="$PROJECT_DIR$/src/main/java/com/caroffice/endpoint/user/UserDTO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/caroffice/entity/UserEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/caroffice/entity/UserEntity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/BDD/scenarios.txt" afterPath="$PROJECT_DIR$/src/main/resources/BDD/scenarios.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/com/caroffice/endpoint/user/UserDTOTest.java" afterPath="$PROJECT_DIR$/src/test/com/caroffice/endpoint/user/UserDTOTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/BDD/scenarios.txt" afterPath="$PROJECT_DIR$/target/classes/BDD/scenarios.txt" />
     </list>
     <ignored path="caroffice.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,46 +29,48 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ApplicationStarter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/caroffice/ApplicationStarter.java">
+      <file leaf-file-name="OilEndpoint.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/caroffice/endpoint/oil/OilEndpoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="234">
+              <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
               <folding>
-                <element signature="e#371#372#0" expanded="true" />
-                <element signature="e#440#441#0" expanded="true" />
+                <element signature="e#557#558#0" expanded="true" />
+                <element signature="e#603#604#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scenarios.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/BDD/scenarios.txt">
+      <file leaf-file-name="OilBusiness.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/caroffice/business/OilBusiness.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="118" column="24" selection-start-line="118" selection-start-column="24" selection-end-line="118" selection-end-column="24" />
+            <state relative-caret-position="197">
+              <caret line="40" column="46" selection-start-line="40" selection-start-column="46" selection-end-line="40" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserEntity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/caroffice/entity/UserEntity.java">
+      <file leaf-file-name="UserDTO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/caroffice/endpoint/user/UserDTO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="51" column="37" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
+            <state relative-caret-position="164">
+              <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1202#1203#0" expanded="true" />
+                <element signature="e#1245#1246#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserBusiness.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/caroffice/business/UserBusiness.java">
+      <file leaf-file-name="scenarios.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/BDD/scenarios.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+            <state relative-caret-position="196">
+              <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -81,18 +79,8 @@
       <file leaf-file-name="UserDTOTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/com/caroffice/endpoint/user/UserDTOTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="32" column="44" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserEndpoint.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/caroffice/endpoint/user/UserEndpoint.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+            <state relative-caret-position="108">
+              <caret line="52" column="33" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -167,10 +155,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/caroffice/infrastructure/validation/ErrorField.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/caroffice/infrastructure/validation/ValidationErrorDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/caroffice/infrastructure/validation/ValidationErrorBuilder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/caroffice/endpoint/user/UserDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/caroffice/entity/UserEntity.java" />
         <option value="$PROJECT_DIR$/src/main/resources/BDD/scenarios.txt" />
         <option value="$PROJECT_DIR$/src/test/com/caroffice/endpoint/user/UserDTOTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/caroffice/entity/UserEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/caroffice/endpoint/user/UserDTO.java" />
       </list>
     </option>
   </component>
@@ -299,11 +287,101 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BDD" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="caroffice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="caroffice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="caroffice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="caroffice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="caroffice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="caroffice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="endpoint" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="caroffice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="caroffice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="caroffice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="endpoint" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oil" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -345,7 +423,7 @@
       <recent name="$PROJECT_DIR$/src/test" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in caroffice">
+  <component name="RunManager" selected="JUnit.UserDTOTest.shouldValidationAnnotationsOnEachAttribute_when_userDTOObjectIsBuilt">
     <configuration default="false" name="All in caroffice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="caroffice" />
@@ -895,10 +973,10 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.All in caroffice" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.UserDTOTest.shouldValidationAnnotationsOnEachAttribute_when_userDTOObjectIsBuilt" />
         <item index="1" class="java.lang.String" itemvalue="Spring Boot.ApplicationStarter" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.OilEntityTest.shouldReturnOilDTO_when_toDTOMethodIsCalled" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.UserDTOTest.shouldValidationAnnotationsOnEachAttribute_when_userDTOObjectIsBuilt" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.All in caroffice" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.OilEntityTest.shouldReturnOilDTO_when_toDTOMethodIsCalled" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.OilDTOTest.shouldValidationAnnotationsOnEachAttribute_when_userDTOObjectIsBuilt" />
       </list>
     </recent_temporary>
@@ -930,7 +1008,7 @@
       <workItem from="1482377528477" duration="4438000" />
       <workItem from="1482460043331" duration="9943000" />
       <workItem from="1482814338580" duration="14635000" />
-      <workItem from="1482933658150" duration="2498000" />
+      <workItem from="1482933658150" duration="3834000" />
     </task>
     <task id="LOCAL-00001" summary="#Task8 - Allow communication between Java script requests from the bodywork system">
       <created>1482409142928</created>
@@ -967,7 +1045,14 @@
       <option name="project" value="LOCAL" />
       <updated>1482844524785</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="#Task14 - Saving User - Adding fields email and password">
+      <created>1482939714817</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1482939714817</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -976,18 +1061,6 @@
     </history-entry>
     <history-entry file="All_in_caroffice - 2016.12.29 at 02h 41m 32s.xml">
       <configuration name="All in caroffice" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="OilEntityTest_shouldReturnOilDTO_when_toDTOMethodIsCalled - 2016.12.27 at 18h 08m 39s.xml">
-      <configuration name="OilEntityTest.shouldReturnOilDTO_when_toDTOMethodIsCalled" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="OilEntityTest_shouldReturnOilDTO_when_toDTOMethodIsCalled - 2016.12.27 at 18h 08m 59s.xml">
-      <configuration name="OilEntityTest.shouldReturnOilDTO_when_toDTOMethodIsCalled" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserDTOTest_shouldValidationAnnotationsOnEachAttribute_when_userDTOObjectIsBuilt - 2016.12.27 at 17h 56m 33s.xml">
-      <configuration name="UserDTOTest.shouldValidationAnnotationsOnEachAttribute_when_userDTOObjectIsBuilt" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserDTOTest_shouldValidationAnnotationsOnEachAttribute_when_userDTOObjectIsBuilt - 2016.12.27 at 17h 57m 10s.xml">
-      <configuration name="UserDTOTest.shouldValidationAnnotationsOnEachAttribute_when_userDTOObjectIsBuilt" configurationId="JUnit" />
     </history-entry>
     <history-entry file="UserDTOTest_shouldValidationAnnotationsOnEachAttribute_when_userDTOObjectIsBuilt - 2016.12.27 at 17h 58m 20s.xml">
       <configuration name="UserDTOTest.shouldValidationAnnotationsOnEachAttribute_when_userDTOObjectIsBuilt" configurationId="JUnit" />
@@ -1001,9 +1074,21 @@
     <history-entry file="UserDTOTest_shouldValidationAnnotationsOnEachAttribute_when_userDTOObjectIsBuilt - 2016.12.27 at 18h 00m 31s.xml">
       <configuration name="UserDTOTest.shouldValidationAnnotationsOnEachAttribute_when_userDTOObjectIsBuilt" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="UserDTOTest_shouldValidationAnnotationsOnEachAttribute_when_userDTOObjectIsBuilt - 2016.12.29 at 02h 59m 02s.xml">
+      <configuration name="UserDTOTest.shouldValidationAnnotationsOnEachAttribute_when_userDTOObjectIsBuilt" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserDTOTest_shouldValidationAnnotationsOnEachAttribute_when_userDTOObjectIsBuilt - 2016.12.29 at 03h 03m 30s.xml">
+      <configuration name="UserDTOTest.shouldValidationAnnotationsOnEachAttribute_when_userDTOObjectIsBuilt" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserDTOTest_shouldValidationAnnotationsOnEachAttribute_when_userDTOObjectIsBuilt - 2016.12.29 at 03h 03m 38s.xml">
+      <configuration name="UserDTOTest.shouldValidationAnnotationsOnEachAttribute_when_userDTOObjectIsBuilt" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserDTOTest_shouldValidationAnnotationsOnEachAttribute_when_userDTOObjectIsBuilt - 2016.12.29 at 03h 03m 42s.xml">
+      <configuration name="UserDTOTest.shouldValidationAnnotationsOnEachAttribute_when_userDTOObjectIsBuilt" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73359000" />
+    <option name="totallyTimeSpent" value="74695000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="51" y="24" width="1315" height="744" extended-state="6" />
@@ -1017,12 +1102,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22937942" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29907975" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29907975" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297546" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297546" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28829536" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28829536" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1055,7 +1140,8 @@
     <MESSAGE value="#Task11 - Start saving User" />
     <MESSAGE value="#Task12 - Allow communication between Java script requests from the bodywork system (Header  Content-Type)" />
     <MESSAGE value="#Task13 - return errors in a while that the front-end can understand and propagate the message to the user" />
-    <option name="LAST_COMMIT_MESSAGE" value="#Task13 - return errors in a while that the front-end can understand and propagate the message to the user" />
+    <MESSAGE value="#Task14 - Saving User - Adding fields email and password" />
+    <option name="LAST_COMMIT_MESSAGE" value="#Task14 - Saving User - Adding fields email and password" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1120,6 +1206,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
           <caret line="156" column="16" selection-start-line="156" selection-start-column="16" selection-end-line="156" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1189,6 +1276,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="35" column="58" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1204,6 +1292,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="413">
           <caret line="35" column="38" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1211,6 +1300,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4">
           <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1239,6 +1329,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="118">
           <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1309,6 +1400,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="227">
           <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1323,20 +1415,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="26" column="100" selection-start-line="26" selection-start-column="100" selection-end-line="26" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/caroffice/business/OilBusiness.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/caroffice/endpoint/oil/OilEndpoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -1398,6 +1476,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="42" column="27" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1423,52 +1502,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/caroffice/endpoint/user/UserDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1444#1445#0" expanded="true" />
-            <element signature="e#1472#1473#0" expanded="true" />
-            <element signature="e#1507#1508#0" expanded="true" />
-            <element signature="e#1538#1539#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/BDD/scenarios.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="118" column="24" selection-start-line="118" selection-start-column="24" selection-end-line="118" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/com/caroffice/endpoint/user/UserDTOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="32" column="44" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/caroffice/business/UserBusiness.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
           <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/caroffice/ApplicationStarter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="e#371#372#0" expanded="true" />
-            <element signature="e#440#441#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1482,11 +1520,69 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/caroffice/entity/UserEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="51" column="37" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
+        <state relative-caret-position="290">
+          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/caroffice/ApplicationStarter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+          <folding>
+            <element signature="e#371#372#0" expanded="true" />
+            <element signature="e#440#441#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/caroffice/endpoint/oil/OilEndpoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+          <folding>
+            <element signature="e#557#558#0" expanded="true" />
+            <element signature="e#603#604#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/caroffice/business/OilBusiness.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="40" column="46" selection-start-line="40" selection-start-column="46" selection-end-line="40" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/com/caroffice/endpoint/user/UserDTOTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="52" column="33" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/caroffice/endpoint/user/UserDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1202#1203#0" expanded="true" />
+            <element signature="e#1245#1246#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/BDD/scenarios.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>

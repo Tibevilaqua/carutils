@@ -4,6 +4,7 @@ import com.caroffice.endpoint.oil.OilDTO;
 import com.caroffice.entity.UserEntity;
 import com.caroffice.infrastructure.user.GenderEnum;
 import com.caroffice.infrastructure.utils.AnnotationCheckHelper;
+import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotBlank;
 import org.junit.Assert;
 import org.junit.Test;
@@ -49,11 +50,17 @@ public class UserDTOTest {
         Boolean isNotBlankPresentInSurNameField = AnnotationCheckHelper.doesFieldContainsAnnotation(UserDTO.class, "surname", NotBlank.class);
         Boolean isNotNullPresentInGenderField = AnnotationCheckHelper.doesFieldContainsAnnotation(UserDTO.class, "gender", NotNull.class);
         Boolean isNotNullPresentInBirthDateField = AnnotationCheckHelper.doesFieldContainsAnnotation(UserDTO.class, "birthDate", NotNull.class);
+        Boolean isNotBlankPresentInEmailField = AnnotationCheckHelper.doesFieldContainsAnnotation(UserDTO.class, "email", NotBlank.class);
+        Boolean isEmailPresentInEmailField = AnnotationCheckHelper.doesFieldContainsAnnotation(UserDTO.class, "email", Email.class);
+        Boolean isNotBlankPresentInPasswordField = AnnotationCheckHelper.doesFieldContainsAnnotation(UserDTO.class, "password", NotBlank.class);
 
         assertTrue("Should have @NotBlank to validate itself",isNotBlankPresentInNameField);
         assertTrue("Should have @NotBlank to validate itself",isNotBlankPresentInSurNameField);
         assertTrue("Should have @NotNull to validate itself",isNotNullPresentInGenderField);
         assertTrue("Should have @NotNull to validate itself",isNotNullPresentInBirthDateField);
+        assertTrue("Should have @NotBlank to validate itself",isNotBlankPresentInEmailField);
+        assertTrue("Should have @Email to validate itself",isEmailPresentInEmailField);
+        assertTrue("Should have @NotBlank to validate itself",isNotBlankPresentInPasswordField);
 
 
     }

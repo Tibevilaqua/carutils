@@ -2,6 +2,7 @@ package com.caroffice.endpoint.user;
 
 import com.caroffice.entity.UserEntity;
 import com.caroffice.infrastructure.user.GenderEnum;
+import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotBlank;
 
 import javax.validation.constraints.NotNull;
@@ -21,6 +22,7 @@ public class UserDTO {
     private GenderEnum gender;
     @NotNull(message = "invalid birthdate")
     private Date birthDate;
+    @Email(message = "Invalid email")
     @NotBlank(message = "Invalid email")
     private String email;
     @NotBlank(message = "Invalid password")
