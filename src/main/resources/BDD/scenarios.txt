@@ -147,3 +147,10 @@
     Given: The system is up and running
     When:  Some validation error be thrown
     Then:  The cause of the error should return together with its field
+
+
+#Task18 - Creating endpoint to search Brand
+
+    Given: There's an Brand registered in our system
+    When:  the end point (/brand/1) be accessed
+    Then:  the corresponded Brand to the ID 1 will be returned

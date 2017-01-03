@@ -8,8 +8,8 @@ public interface Resources {
 
 //  Resources
     String OIL = "/oil";
-
     String USER = "/user";
+    String BRAND = "/brand/{id}";
 
 
 //  OilEntity Requests
