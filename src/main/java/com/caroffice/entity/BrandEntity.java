@@ -1,5 +1,7 @@
 package com.caroffice.entity;
 
+import com.caroffice.endpoint.brand.BrandDTO;
+import com.caroffice.entity.behavior.EntityToDTO;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -11,7 +13,7 @@ import java.util.Arrays;
  * Created by root on 03/01/17.
  */
 @Document(collection = "brand")
-public class BrandEntity {
+public class BrandEntity implements EntityToDTO<BrandDTO>{
 
     @Id
     @Field("_id")
@@ -41,6 +43,10 @@ public class BrandEntity {
         return image;
     }
 
+
+    public BrandDTO toDTO(){
+        return new BrandDTO(name,image);
+    }
 
     @Override
     public boolean equals(Object o) {

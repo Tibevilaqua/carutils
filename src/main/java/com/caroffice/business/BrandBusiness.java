@@ -23,8 +23,8 @@ public class BrandBusiness {
     }
 
     public BrandDTO getBrandBy(String name){
-        return new BrandDTO(Optional.ofNullable(brandRepository.findByName(name))
-                .orElseThrow(() -> new CustomException(ExceptionEnum.BRAND_NOT_FOUND)));
+        return Optional.ofNullable(brandRepository.findByName(name))
+                .orElseThrow(() -> new CustomException(ExceptionEnum.BRAND_NOT_FOUND)).toDTO();
     }
 
 

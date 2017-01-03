@@ -1,6 +1,7 @@
 package com.caroffice.entity;
 
 import com.caroffice.endpoint.user.UserDTO;
+import com.caroffice.entity.behavior.EntityToDTO;
 import com.caroffice.infrastructure.user.GenderEnum;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
@@ -13,7 +14,7 @@ import java.util.Date;
  * Created by root on 27/12/16.
  */
 @Document(collection = "user")
-public class UserEntity {
+public class UserEntity  implements EntityToDTO<UserDTO> {
 
 
     @Id
@@ -47,6 +48,12 @@ public class UserEntity {
         this.birthDate = userDTO.getBirthDate();
         this.email = userDTO.getEmail();
         this.password = userDTO.getPassword();
+    }
+
+
+    @Override
+    public UserDTO toDTO() {
+        return new UserDTO(name,surname,gender,birthDate,email,password);
     }
 
 
@@ -91,4 +98,6 @@ public class UserEntity {
                 ", password='" + password + '\'' +
                 '}';
     }
+
+
 }

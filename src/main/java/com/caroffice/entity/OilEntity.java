@@ -1,6 +1,7 @@
 package com.caroffice.entity;
 
 import com.caroffice.endpoint.oil.OilDTO;
+import com.caroffice.entity.behavior.EntityToDTO;
 import com.caroffice.infrastructure.oil.OilTypeEnum;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
@@ -11,7 +12,7 @@ import org.springframework.data.mongodb.core.mapping.Field;
  * Created by root on 05/12/16.
  */
 @Document(collection = "oil")
-public class OilEntity {
+public class OilEntity  implements EntityToDTO<OilDTO> {
 
     @Id
     @Field("_id")
@@ -43,7 +44,7 @@ public class OilEntity {
     }
 
 
-    public OilDTO toOilDTO(){
+    public OilDTO toDTO(){
         return new OilDTO(this);
     }
 

@@ -22,7 +22,6 @@ public class BrandEndpoint {
 
     @RequestMapping(value = BRAND,method = RequestMethod.GET)
     public BrandDTO getBy(@PathVariable String id) {
-        System.out.println(id);
         return brandBusiness.getBrandBy(id);
     }
 

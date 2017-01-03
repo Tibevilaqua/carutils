@@ -10,6 +10,7 @@ public interface Resources {
     String OIL = "/oil";
     String USER = "/user";
     String BRAND = "/brand/{id}";
+    String MODEL = "/model";
 
 
 //  OilEntity Requests

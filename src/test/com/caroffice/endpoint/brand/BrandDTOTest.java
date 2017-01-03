@@ -15,7 +15,7 @@ public class BrandDTOTest {
         String name = "Peugeot";
         byte[] image =  new byte[]{10,20};
 
-        BrandDTO brandDTO = new BrandDTO(new BrandEntity(name,image));
+        BrandDTO brandDTO = new BrandEntity(name,image).toDTO();
 
         Assert.assertEquals("Should be the same", name, brandDTO.getName());
         Assert.assertEquals("Should be the same", image, brandDTO.getImage());

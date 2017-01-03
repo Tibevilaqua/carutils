@@ -1,6 +1,5 @@
 package com.caroffice.endpoint.user;
 
-import com.caroffice.endpoint.oil.OilDTO;
 import com.caroffice.entity.UserEntity;
 import com.caroffice.infrastructure.user.GenderEnum;
 import com.caroffice.infrastructure.utils.AnnotationCheckHelper;
@@ -9,6 +8,7 @@ import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotBlank;
 import org.junit.Assert;
 import org.junit.Test;
+
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import java.util.Date;
@@ -34,6 +34,22 @@ public class UserDTOTest {
         Assert.assertEquals("Should be the same", expectedResult, toTransform.toUserEntity());
 
     }
+
+    @Test
+    public void shouldReturnUserEntity_when_toDTOMethodIsCalled(){
+        Date date = new Date();
+        String name = "James";
+        String surName = "Bond";
+        String email = "james.bond@007.com";
+        String password = "123456";
+
+        UserDTO transformedUserDTO = new UserEntity(null, name, surName, GenderEnum.MALE, date, email,password).toDTO();
+        UserDTO expectedResult = new UserDTO(name, surName, GenderEnum.MALE, date,email,password);
+
+        Assert.assertEquals("Should be the same", transformedUserDTO, expectedResult);
+
+    }
+
 
 
     @Test

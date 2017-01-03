@@ -151,6 +151,13 @@
 
 #Task18 - Creating endpoint to search Brand
 
-    Given: There's an Brand registered in our system
+    Given: There's a Brand registered in our system
     When:  the end point (/brand/1) be accessed
     Then:  the corresponded Brand to the ID 1 will be returned
+
+#Task19 - Creating endpoint to search Model
+
+    Given: A selected Brand
+    AND:   There's a model registered in the system for this brand
+    When:  The end point (/model?brand="Peugeot") be accessed
+    Then:  A list of Models corresponding to the Brand will be returned.

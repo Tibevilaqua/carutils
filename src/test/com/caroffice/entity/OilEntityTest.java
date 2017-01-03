@@ -20,7 +20,7 @@ public class OilEntityTest {
         OilDTO expectedResult = new OilDTO(name, OilTypeEnum.TYPE_5W_30, description, new byte[]{10,10});
         OilEntity toTransform = new OilEntity(null,name, OilTypeEnum.TYPE_5W_30, description, new byte[]{10,10});
 
-        Assert.assertEquals("Should be the same", expectedResult, toTransform.toOilDTO());
+        Assert.assertEquals("Should be the same", expectedResult, toTransform.toDTO());
     }
 
 

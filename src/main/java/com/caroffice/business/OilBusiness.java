@@ -56,7 +56,7 @@ public class OilBusiness {
         Optional.ofNullable(oilEntity.getName()).ifPresent(name -> oil.setName(name));
         Optional.ofNullable(oilEntity.getType()).ifPresent(type -> oil.setType(type));
 
-        return oilRepository.save(oil).toOilDTO();
+        return oilRepository.save(oil).toDTO();
 
     }
 
