@@ -48,7 +48,7 @@
         ,"type": "TYPE_5W_30"
         ,"description": "My description"
     }
-    Then:  the corresponded OIL to the ID 1 will be returned
+    Then:  Then:  the corresponded OIL will be saved
     AND  the code {201 create} will be returned
 
 
@@ -161,3 +161,19 @@
     AND:   There's a model registered in the system for this brand
     When:  The end point (/model?brand="Peugeot") be accessed
     Then:  A list of Models corresponding to the Brand will be returned.
+
+
+#Task20 - Start saving Oil products with image
+
+    Given: the system is up and running
+    When:  the end point (/oil) be accessed
+    AND    the user try to save a new Oil like:
+    {
+        "name": "My Oil Test"
+        ,"type": "TYPE_5W_30"
+        ,"description": "My description"
+
+    }
+    AND: the image be sent as well
+    Then:  the corresponded OIL will be saved with its image
+    AND  the code {201 create} will be returned

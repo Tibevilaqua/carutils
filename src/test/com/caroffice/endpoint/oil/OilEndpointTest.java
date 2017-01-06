@@ -3,12 +3,16 @@ package com.caroffice.endpoint.oil;
 import com.caroffice.endpoint.oil.OilDTO;
 import com.caroffice.endpoint.oil.OilEndpoint;
 import com.caroffice.business.OilBusiness;
+import com.caroffice.infrastructure.exception.CustomException;
 import com.caroffice.infrastructure.oil.OilTypeEnum;
 import org.junit.Assert;
 import org.junit.Test;
 import org.mockito.Mockito;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.io.IOException;
 
 /**
  * Created by root on 04/12/16.
@@ -32,8 +36,21 @@ public class OilEndpointTest {
         OilBusiness oilBusinessMocked = Mockito.mock(OilBusiness.class);
         Mockito.doNothing().when(oilBusinessMocked).save(oilEntity);
         OilDTO oilDTO = new OilDTO();
-        ResponseEntity<Void> createdOil = new OilEndpoint(oilBusinessMocked).save(oilDTO);
+        MultipartFile image = Mockito.mock(MultipartFile.class);
+        ResponseEntity<Void> createdOil = new OilEndpoint(oilBusinessMocked).save(image, oilDTO);
         Assert.assertEquals(createdOil.getStatusCode(), HttpStatus.CREATED);
+    }
+
+
+    @Test(expected = CustomException.class)
+    public void shouldThrowCustomException_when_ImageIsInvalid() throws IOException{
+        OilDTO oilEntity = new OilDTO();
+        OilBusiness oilBusinessMocked = Mockito.mock(OilBusiness.class);
+        Mockito.doNothing().when(oilBusinessMocked).save(oilEntity);
+        OilDTO oilDTO = new OilDTO();
+        MultipartFile image = Mockito.mock(MultipartFile.class);
+        Mockito.when(image.getBytes()).thenThrow(IOException.class);
+        ResponseEntity<Void> createdOil = new OilEndpoint(oilBusinessMocked).save(image, oilDTO);
     }
 
 
