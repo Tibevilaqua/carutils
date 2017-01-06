@@ -22,6 +22,10 @@ public class ValidationErrorBuilder {
         return error;
     }
 
+    public static ValidationErrorDTO fromBindingErrors(String field) {
+       return fromBindingErrors(field,String.format("%s%s%s","Invalid ", field, " value"));
+    }
+
     public static ValidationErrorDTO bodyNotSent() {
         ValidationErrorDTO error = new ValidationErrorDTO("Validation failed, incompatible value. 1 error");
         error.addValidationError(new ErrorField(null,"Required request body is missing"));

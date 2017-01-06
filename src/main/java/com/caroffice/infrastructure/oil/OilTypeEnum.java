@@ -17,4 +17,10 @@ public enum OilTypeEnum {
     public String getType() {
         return type;
     }
+
+    public static String getTypeAttributeName(){
+        return "type";
+    }
+
+
 }

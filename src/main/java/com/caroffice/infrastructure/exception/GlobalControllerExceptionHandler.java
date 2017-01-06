@@ -1,5 +1,6 @@
 package com.caroffice.infrastructure.exception;
 
+import com.caroffice.infrastructure.oil.OilTypeEnum;
 import com.caroffice.infrastructure.validation.ValidationErrorDTO;
 import com.caroffice.infrastructure.validation.ValidationErrorBuilder;
 import com.fasterxml.jackson.databind.exc.InvalidFormatException;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.multipart.support.MissingServletRequestPartException;
 
 /**
  * Created by root on 05/12/16.
@@ -40,9 +42,12 @@ public class GlobalControllerExceptionHandler {
     @ResponseBody
     @ResponseStatus(value = HttpStatus.BAD_REQUEST)
     public ValidationErrorDTO handleConflict(InvalidFormatException e) {
-        String wrongValue = e.getValue().toString();
         String targetedTypeName = e.getTargetType().getTypeName();
-        return ValidationErrorBuilder.fromBindingErrors(targetedTypeName,wrongValue);
+        if(OilTypeEnum.class.getName().equals(targetedTypeName)){
+            targetedTypeName = OilTypeEnum.getTypeAttributeName();
+        }
+
+        return ValidationErrorBuilder.fromBindingErrors(targetedTypeName);
     }
     @ExceptionHandler(HttpMessageNotReadableException.class)
     @ResponseBody
@@ -54,6 +59,13 @@ public class GlobalControllerExceptionHandler {
         }
 
         return ValidationErrorBuilder.bodyNotSent();
+    }    @ExceptionHandler(MissingServletRequestPartException.class)
+    @ResponseBody
+    @ResponseStatus(value = HttpStatus.BAD_REQUEST)
+    public ValidationErrorDTO bodyNotSent(MissingServletRequestPartException e) {
+
+
+        return ValidationErrorBuilder.fromBindingErrors(e.getRequestPartName(),ExceptionEnum.INVALID_OIL_IMAGE.getDescription());
     }
 
 }
